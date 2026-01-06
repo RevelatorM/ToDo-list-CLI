@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 )
 
 // =========================
@@ -64,7 +64,7 @@ func deleteTask(db *sql.DB) {
 //=========================
 
 func main() {
-	database, err := sql.Open("sqlite3", "./database.db")
+	database, err := sql.Open("sqlite", "./database.db")
 	if err != nil {
 		fmt.Println(err)
 		return
