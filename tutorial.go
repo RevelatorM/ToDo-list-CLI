@@ -22,7 +22,7 @@ func addTask(db *sql.DB) {
 		return
 	}
 
-	stmt.Exec(task, "todo")
+	stmt.Exec(task, "")
 	fmt.Println("task was added!")
 }
 
@@ -82,10 +82,10 @@ func main() {
 	}
 	statement.Close()
 	//=========================
-	fmt.Println("Welcome to Todo list \n")
+	fmt.Println("Welcome to Todo list")
 	//=========================
 	for {
-		fmt.Println("\n1 - add task")
+		fmt.Println("\n1 - add task (number and task`s name)")
 		fmt.Println("2 - show tasks")
 		fmt.Println("3 - delete tasks")
 		fmt.Println("0 - exit")
